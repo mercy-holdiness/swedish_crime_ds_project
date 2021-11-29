@@ -1,7 +1,7 @@
 Define the business case:
 Purpose: To survey the crime statistics in Sweden for the past from years and uncover any possible trends with respect to overall increase/decrease in crime, and distributions in gender and age in the data collected.
 
-I was motivated by the Securitas internship interview where I learned that they are interested in delivering crime statistics to individuals to help inform them on safety and on options for security, and for businesses/corporations to help them to set liability and security indices for insurance adjustments etc. given the implemented security procedures that Securitas offers.
+I was motivated by a security company where I learned that they are interested in delivering crime statistics to individuals to help inform them on safety and on options for security, and for businesses/corporations to help them to set liability and security indices for insurance adjustments etc. given the implemented security procedures that they offer.
 
 With a broad overview of the crime statistics in Sweden, it might be interesting to see trends and to show where one can further develop questions on how to gain insights through data which exists or which is missing.
 
@@ -40,7 +40,7 @@ Comparison images are taken from the Swedish Crime Survey of 2020
 #### Reference: https://www.bra.se/bra-in-english/home/publications/archive/publications/2020-10-15-swedish-crime-survey-2020.html?lang=sv
 
 Possible to use Alteryx to parse the data from different files: https://help.alteryx.com/current/designer/multi-row-formula-tool
-Or use pandas tricks to import from a messy excel file: https://towardsdatascience.com/read-messy-excel-files-like-a-pro-27880306ad0b
+Or use pandas to import from a messy excel file: https://towardsdatascience.com/read-messy-excel-files-like-a-pro-27880306ad0b
 Or this if you have semi structured excel file: https://pbpython.com/pandas-excel-range.html
 
 Nice visualisation links for dashboards:
@@ -63,18 +63,6 @@ There exists an older dataset on kaggle, which is very poorly discussed or explo
 Kaggle Dataset: Swedish crime rates - reported crimes in Sweden from 1950 to 2015
 Link: https://www.kaggle.com/mguzmann/swedishcrime
 Note: No data set that I saw was really digging deep into the information. It is clear that they did not read the statistics report from SCB. Data was from 1950 to 2015. Also, it is not clear where the population data comes from in this csv as it does not match with that found in SCB database.
-
-
-Important notes:
-
-Is data in the most recent report adjusted for changes in the description of sexual assault crimes as defined by the national Swedish court system, when did this occur?? Other changes relevant to reporting/classification see footnotes???
-
-++ I can add the Population statistics to the crime data set.
-
-Getting started:
-I start with Tableau, because I can get a nice overview, but my process could be implemented to any dashboard service.
-
-Download Tableau Desktop, for free use one year as ‘student’. Or use Tableau Public version.
 
 
 Model comparison:
@@ -150,7 +138,7 @@ Notes: Reported offences 1950 - 2020
 
 
 ### The column keys are as follows:
-a.  year - the year ranges from 1950 - 2020
+a.      year - the year ranges from 1950 - 2020
 
 b.	total_crimes - total number of reported crimes
 
@@ -158,9 +146,9 @@ c.	total_penal_crimes - total crimes against the Penal Code
 
 d.	total_life_and_health - Out of total crimes against Penal Code: Crimes against life and health (Ch 3).
 
-e.	murder - Out of total crimes against life and health, those crimes consisting of Completed murder, manslaughter and assault resulting in death, (Ch. 3, § 1, 2, 5, 6).
+e.	murder - Out of total crimes against life and health, those crimes consisting of Completed murder, manslaughter and assault resulting in death, (Ch. 3, §           1, 2, 5, 6).
 
-f.	assault - Out of total crimes against life and health, those crimes consisting of assault, and aggravated assault. (Ch. 3, § 5,6 Assault not resulting in death)
+f.	assault - Out of total crimes against life and health, those crimes consisting of assault, and aggravated assault. (Ch. 3, § 5,6 Assault not resulting in           death)
 
 g.	total_sexual_offence - Out of total crimes against Penal Code: Sexual offences (Ch. 6)
 
@@ -168,9 +156,9 @@ h.	rape - Out of total sexual offences, those crimes classified as rape (Ch. 6, 
 
 i.	total_theft - Out of total crimes against Penal Code: Theft, robbery, and other offences of stealing (Ch. 8)*
 
-j.	burglary_no_guns - Out of total crimes against Penal Code, classified as theft, robbery, and other offences of stealing, those burglaries, not involving fire arms. (Ch. 8, § 1, 2, 4 Burglary, not involving fire arms)**
+j.	burglary_no_guns - Out of total crimes against Penal Code, classified as theft, robbery, and other offences of stealing, those burglaries, not involving 	 fire arms. (Ch. 8, § 1, 2, 4 Burglary, not involving fire arms)**
 
-k.	burglary_home - Out of total crimes against Penal Code, classified as theft, robbery, and other offences of stealing, those burglaries, not involving fire arms, which occurred in flats, and private houses. (Ch. 8, § 1, 2, 4 Burglary, not involving fire arms: In dwellings, summer houses, etc: In flats, private houses)** ***Subset of above***
+k.	burglary_home - Out of total crimes against Penal Code, classified as theft, robbery, and other offences of stealing, those burglaries, not involving fire  	    arms, which occurred in flats, and private houses. (Ch. 8, § 1, 2, 4 Burglary, not involving fire arms: In dwellings, summer houses, etc: In flats, private 	houses)** ***Subset of above***
 
 l.	vehicle_theft - Out of total crimes against Penal Code, classified as theft, robbery, and other offences of stealing, those which include stolen vehicles. (Ch. 8, § 7 Vehicle theft: Car theft)
 
@@ -205,16 +193,16 @@ Tableau visualisation:
 Import data into Tableau as a Microsoft Excel file. 
 Add pils to Columns and Rows, add important events to data points/columns, organize and structure the Story for each crime area, combining important areas together to gain a visual understanding of the rates. 
 
-DUI and Narcotics: Rows: driving_under_influence, narcotics, dui_rate. 
 
-Then look at major events in Sweden’s history to see if we can note some interesting changes in the rate of increase or decrease of crimes. 
+References and notes on interesting time points associated with specific types of crimes:
+
+DUI and Narcotics: Rows: driving_under_influence, narcotics, dui_rate. 
 
 DUI - For example, Systembolaget (1955), Righthand side driving (1967), Seatbelts introduced (1975), Swedish Financial Crisis (1991), Blood alcohol content limit (BAC) changes - (1994) from 1.5 mg/ml to 1.0mg/ml, Vision Zero (1997), Stringent laws applied BAC to 0.5 mg/ml (1999), (2001) EU commission also proposes to 0.5 mg/ml BAC.  Öresundsbron opens (2001), World Financial Crisis (2008).
 
-
 Other: speed limits changing, age limits for driving, EU legislation of signage. Implementation of safety courses.
-Currently: 
 
+Currently: 
 As of 1 April 2009, this compulsory risk education will be expanded. The original programme above will remain (‘part 2’), and a new compulsory part (‘part 1’) will be added. This is a classroom-based course focusing on alcohol, drugs, fatigue and risky behaviour in general. The minimum education time is, again, 180 minutes. NOTE: part 2 is a halkkörning, which tests individuals on difficult driving conditions, i.e. highly slippery roads, high speed breaking, proper use of seatbelt among others..
 Source: https://www.cieca.eu/news/605
 
